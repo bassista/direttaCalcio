@@ -1,0 +1,18 @@
+{
+  "manifestFormat": 1,
+  "packageFormat": 1,
+  "locales": [
+    "it-IT"
+  ],
+  "projectID": "JP9BD8BFBE7A",
+  "releaseID": "JR6BE49091F2",
+  "generatedAt": "2020-08-05T11:35:54Z",
+  "platforms": [
+    "Alexa"
+  ],
+  "contentInterfaceID": "JI20A24E15D9",
+  "compatibleInterfaceIDs": [
+    "JI1FF7CEE430"
+  ],
+  "fallbackLocales": {}
+}

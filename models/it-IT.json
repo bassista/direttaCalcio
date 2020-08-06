@@ -1,0 +1,648 @@
+{
+	"invocation": "diretta calcio",
+	"intents": [
+		{
+			"name": "SeguiOggiTeamIntent",
+			"phrases": [
+				"segui per la giornata la {team}",
+				"segui per la giornata il {team}",
+				"segui per la giornata corrente la {team}",
+				"segui per la giornata corrente il {team}",
+				"segui solo per la giornata corrente la {team}",
+				"segui solo per la giornata corrente il {team}",
+				"segui solo per oggi la {team}",
+				"segui solo per oggi il {team}",
+				"segui oggi la {team}",
+				"segui oggi il {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "SeguiSempreTeamIntent",
+			"phrases": [
+				"segui per il campionato la {team}",
+				"segui per il campionato il {team}",
+				"segui per tutto il campionato la {team}",
+				"segui per tutto il campionato il {team}",
+				"segui sempre la {team}",
+				"segui sempre il {team}",
+				"segui la {team}",
+				"segui il {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "TipoNotificheIntent",
+			"phrases": [
+				"{tipoNotifica}"
+			],
+			"inputs": [
+				{
+					"name": "tipoNotifica",
+					"type": "myTipoNotificaType"
+				}
+			]
+		},
+		{
+			"name": "RiceviNotificheIntent",
+			"phrases": [
+				"segui le partite",
+				"di inviarmi le notifiche",
+				"inviami le notifiche",
+				"inviarmi le notifiche",
+				"voglio ricevere le notifiche",
+				"mandami le notifiche",
+				"abilita le notifiche",
+				"le notifiche"
+			]
+		},
+		{
+			"name": "CancellaNotificheIntent",
+			"phrases": [
+				"basta notifiche",
+				"basta con le notifiche",
+				"cancella le notifiche",
+				"rimuovi le notifiche",
+				"di rimuovere le notifiche",
+				"rimuovi le notifiche",
+				"smetti di ricevere le notifiche",
+				"smetti di mandarmi le notifiche",
+				"non inviare più notifiche",
+				"non voglio più le notifiche",
+				"non voglio ricevere più le notifiche"
+			]
+		},
+		{
+			"name": "InizioProssimaGiornataIntent",
+			"phrases": [
+				"quando inizia la prossima giornata",
+				"quando si gioca la prossima giornata",
+				"quando si gioca la prima partita della prossima giornata",
+				"quando si gioca la prima della prossima giornata"
+			]
+		},
+		{
+			"name": "PartiteInCorsoIntent",
+			"phrases": [
+				"quali partite si stanno giocando",
+				"quali sono le partite in corso",
+				"quali partite sono in corso",
+				"le partite che si stanno ancora giocando",
+				"le partite che si stanno ancora disputando",
+				"le partite in corso",
+				"come stanno andando le partite",
+				"un aggiornamento sulle partite",
+				"aggiornami sulle partite in corso",
+				"aggiornamento sulle partite",
+				"dammi un aggiornamento sulle partite"
+			]
+		},
+		{
+			"name": "DispositiviPbIntent",
+			"phrases": [
+				"associa un dispositivo",
+				"associa dispositivo",
+				"associa il mio dispositivo",
+				"associa il mio cellulare",
+				"associa il cellulare"
+			]
+		},
+		{
+			"name": "ScegliDispositivoPbIntent",
+			"phrases": [
+				"scelgo il dispositivo numero {ndisp}",
+				"il dispositivo numero {ndisp}",
+				"dispositivo numero {ndisp}",
+				"dispositivo {ndisp}"
+			],
+			"inputs": [
+				{
+					"name": "ndisp",
+					"type": {
+						"alexa": "AMAZON.NUMBER"
+					}
+				}
+			]
+		},
+		{
+			"name": "NumeroGiorantaCorrenteIntent",
+			"phrases": [
+				"in che giornata siamo",
+				"in che giornata del campionato siamo",
+				"che giornata si sta disputanto",
+				"a che giornata siamo arrivati",
+				"quale è la giornata corrente del campionato",
+				"quale è la giornata corrente",
+				"che giornata è questa"
+			]
+		},
+		{
+			"name": "GiorantaCorrenteIntent",
+			"phrases": [
+				"come sono finite le partite",
+				"come sono finite le partite oggi",
+				"i risultati",
+				"risultati ultima giornata",
+				"risultati della giornata",
+				"i risultati della giornata",
+				"i risultati della giornata",
+				"i risultati dell' ultima giornata",
+				"i risultati delle ultime partite",
+				"quali sono i risultati della giornata",
+				"quali sono i risultati"
+			]
+		},
+		{
+			"name": "CalendarioProssimaGiorantaIntent",
+			"phrases": [
+				"le partite del prossimo turno",
+				"quali sono le partite della prossimo turno",
+				"le partite della prossima giornata",
+				"quali sono le partite della prossima giornata",
+				"quali partite si giocano la prossima giornata",
+				"quale è il calendario della prossima giornata"
+			]
+		},
+		{
+			"name": "CalendarioGiorantaIntent",
+			"phrases": [
+				"le partite della {numeroOrdinalGiornata} giornata",
+				"le partite del giornata numero {numeroGiornata}",
+				"le partite del giornata {numeroGiornata}",
+				"le partite del turno numero {numeroGiornata}",
+				"le partite del turno {numeroGiornata}",
+				"quale è il calendario della giornata numero {numeroGiornata}",
+				"quale è il calendeario della {numeroOrdinalGiornata} giornata",
+				"quali partite si giocano nella giornata numero {numeroGiornata}",
+				"quali partite si giocano nella {numeroOrdinalGiornata} giornata"
+			],
+			"inputs": [
+				{
+					"name": "numeroGiornata",
+					"type": {
+						"alexa": "AMAZON.NUMBER"
+					}
+				},
+				{
+					"name": "numeroOrdinalGiornata",
+					"type": {
+						"alexa": "AMAZON.Ordinal"
+					}
+				}
+			]
+		},
+		{
+			"name": "MarcatoriGiornataIntent",
+			"phrases": [
+				"chi ha segnato",
+				"chi ha segnato oggi",
+				"marcatori della giornata",
+				"marcatori della giornata corrente",
+				"dimmi i marcatori della giornata",
+				"dimmi i marcatori della giornata corrente",
+				"quali sono i marcatori della giornata",
+				"chi sono i marcatori della giornata",
+				"chi sono i marcatori",
+				"chi ha fatto goal oggi"
+			]
+		},
+		{
+			"name": "ClassificaIntent",
+			"phrases": [
+				"la classifica",
+				"classifica",
+				"classifica squadre",
+				"la classifica di serie a",
+				"la classifica della a",
+				"la classifica delle squadre di serie a",
+				"classifica serie a"
+			]
+		},
+		{
+			"name": "ClassificaMarcatoriIntent",
+			"phrases": [
+				"cannonieri",
+				"i migliori marcatori",
+				"marcatori",
+				"la classifica marcatori",
+				"la classifica dei marcatori",
+				"classifica marcatori",
+				"classifica cannonieri",
+				"quale è la classifica dei marcatori",
+				"quale è la classifica dei cannonieri",
+				"chi ha fatto più gol fino ad ora"
+			]
+		},
+		{
+			"name": "PartitaProssimaGiorantaTeamIntent",
+			"phrases": [
+				"qual' è la prossima partita del {team}",
+				"qual' è la prossima partita della {team}",
+				"quale è la prossima partita del {team}",
+				"quale è la prossima partita della {team}",
+				"quale sarà la prossima partita del {team}",
+				"quale sarà la prossima partita della {team}",
+				"con chi gioca la prossima partita il {team}",
+				"con chi gioca la prossima partita la {team}",
+				"contro chi giocherà la prossima partita il {team}",
+				"contro chi giocherà la prossima partita la {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "NotizieTeamIntent",
+			"phrases": [
+				"notizie sul {team}",
+				"notizie sulla {team}",
+				"notizie del {team}",
+				"notizie della {team}",
+				"le notizie sul {team}",
+				"le notizie sulla {team}",
+				"le notizie del {team}",
+				"le notizie della {team}",
+				"le ultime sul {team}",
+				"le ultime sulla {team}",
+				"le ultime notizie sul {team}",
+				"le ultime notizie sulla {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "CannonieriTeamIntent",
+			"phrases": [
+				"chi sono i marcatori della {team}",
+				"chi sono i marcatori del {team}",
+				"i marcatori della {team}",
+				"i marcatori del {team}",
+				"quali sono i marcatori della {team}",
+				"quali sono i marcatori del {team}",
+				"chi ha segnato per il {team}",
+				"chi ha segnato per la {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "BonusMalusTeamIntent",
+			"phrases": [
+				"i bonus e i malus della {teama}",
+				"i bonus e i malus del {teama}",
+				"i bonus e i malus della partita {teama}",
+				"come è finita la partita {teama}",
+				"come è finita la partita del {teama}",
+				"come è finita la partita della {teama}",
+				"bonus malus {teama}",
+				"come è finita {teama}"
+			],
+			"inputs": [
+				{
+					"name": "teama",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "TelecronacaTeamIntent",
+			"phrases": [
+				"telecronaca {teama}",
+				"la telecronaca del {teama}",
+				"la telecronaca della {teama}",
+				"fammi ascoltare la telecronaca {teama}",
+				"fammi ascoltare la telecronaca del {teama}",
+				"fammi ascoltare la telecronaca della {teama}",
+				"fammi sentire la telecronaca del {teama}",
+				"fammi sentire la telecronaca della {teama}",
+				"metti la telecronaca del {teama}",
+				"metti la telecronaca della {teama}",
+				"riproduci la telecronaca del {teama}",
+				"riproduci la telecronaca della {teama}",
+				"riprodurre la telecronaca del {teama}",
+				"riprodurre la telecronaca della {teama}",
+				"di riprodurre la telecronaca del {teama}",
+				"di riprodurre la telecronaca della {teama}"
+			],
+			"inputs": [
+				{
+					"name": "teama",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "RisultatoTeamIntent",
+			"phrases": [
+				"come sta andando il {team}",
+				"come sta andando la {team}",
+				"cosa ha fatto il {team}",
+				"cosa ha fatto la {team}",
+				"cosa sta facendo il {team}",
+				"cosa sta facendo la {team}",
+				"cosa fa il {team}",
+				"cosa fa la {team}",
+				"qual'è il risultato di {team}",
+				"qual'è il risultato della {team}",
+				"qual'è il risultato del {team}",
+				"quando gioca il {team}",
+				"cos'ha fatto la {team}",
+				"cos'ha fatto il {team}",
+				"quando gioca la {team}",
+				"aggiornamento sulla {team}",
+				"aggiornamento sul {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "PosizioneTeamIntent",
+			"phrases": [
+				"in che posizione è il {team}",
+				"in che posizione è la {team}",
+				"a che posto sta il {team}",
+				"a che posto sta la {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "TeamPerGoalSegnatiIntent",
+			"phrases": [
+				"le squadre che hanno segnato più goal"
+			]
+		},
+		{
+			"name": "TeamPerGoalSubitiIntent",
+			"phrases": [
+				"le squadre che hanno subito più goal"
+			]
+		},
+		{
+			"name": "StatisticheTeamIntent",
+			"phrases": [
+				"quali sono le statistiche del {team}",
+				"quali sono le statistiche della {team}",
+				"le statistiche del {team}",
+				"le statistiche della {team}",
+				"statistiche {team}",
+				"statistiche della {team}",
+				"statistiche del {team}",
+				"statistiche sulla {team}",
+				"statistiche sull {team}",
+				"le statistiche sulla {team}",
+				"le statistiche sull {team}"
+			],
+			"inputs": [
+				{
+					"name": "team",
+					"type": "myTeamsType"
+				}
+			]
+		},
+		{
+			"name": "AiutoIntent",
+			"phrases": [
+				"aiutami",
+				"aiuto",
+				"cosa sai fare",
+				"cosa posso chiederti"
+			]
+		},
+		{
+			"name": "StopIntent",
+			"phrases": [
+				"stop",
+				"stoppati",
+				"ferma",
+				"fermati",
+				"esci",
+				"chiudi",
+				"esco",
+				"termina"
+			]
+		},
+		{
+			"name": "CancellaIntent",
+			"phrases": [
+				"cancella",
+				"annulla"
+			]
+		},
+		{
+			"name": "RepeatIntent",
+			"phrases": [
+				"ripeti",
+				"puoi ripetere",
+				"puoi ripeterlo",
+				"cosa hai detto",
+				"puoi dirlo di nuovo"
+			]
+		},
+		{
+			"name": "YesIntent",
+			"phrases": [
+				"si",
+				"ok",
+				"certo",
+				"va bene",
+				"yes"
+			]
+		},
+		{
+			"name": "NoIntent",
+			"phrases": [
+				"no"
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.YesIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.NoIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.RepeatIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.NavigateHomeIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	},
+	"inputTypes": [
+		{
+			"name": "myTipoNotificaType",
+			"values": [
+				{
+					"value": "campionato"
+				},
+				{
+					"value": "giornata"
+				}
+			]
+		},
+		{
+			"name": "myTeamsType",
+			"values": [
+				{
+					"value": "atalanta",
+					"synonyms": [
+						"l'atalanta"
+					]
+				},
+				{
+					"value": "bologna"
+				},
+				{
+					"value": "brescia"
+				},
+				{
+					"value": "cagliari"
+				},
+				{
+					"value": "fiorentina"
+				},
+				{
+					"value": "genoa"
+				},
+				{
+					"value": "inter",
+					"synonyms": [
+						"internazionale"
+					]
+				},
+				{
+					"value": "juventus",
+					"synonyms": [
+						"juve"
+					]
+				},
+				{
+					"value": "lazio"
+				},
+				{
+					"value": "lecce"
+				},
+				{
+					"value": "milan"
+				},
+				{
+					"value": "napoli"
+				},
+				{
+					"value": "parma"
+				},
+				{
+					"value": "roma"
+				},
+				{
+					"value": "sampdoria",
+					"synonyms": [
+						"samp",
+						"sampadoria"
+					]
+				},
+				{
+					"value": "sassuolo"
+				},
+				{
+					"value": "spal"
+				},
+				{
+					"value": "torino",
+					"synonyms": [
+						"toro"
+					]
+				},
+				{
+					"value": "udinese",
+					"synonyms": [
+						"l'udinese",
+						"udine"
+					]
+				},
+				{
+					"value": "verona",
+					"synonyms": [
+						"ellas verona",
+						"hellas verona",
+						"ellas",
+						"hellas"
+					]
+				}
+			]
+		}
+	]
+}

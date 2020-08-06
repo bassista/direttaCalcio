@@ -1,0 +1,115 @@
+{
+	"manifest": {
+		"apis": {
+			"custom": {
+				"endpoint": {
+					"sslCertificateType": "Wildcard",
+					"uri": "https://webhook.jovo.cloud/3cf96a62-ad30-4243-b3c6-eea7b48a548c"
+				},
+				"interfaces": [
+					{
+						"type": "CAN_FULFILL_INTENT_REQUEST"
+					},
+					{
+						"type": "ALEXA_PRESENTATION_APL"
+					}
+				]
+			}
+		},
+		"events": {
+			"endpoint": {
+				"uri": "arn:aws:lambda:eu-west-1:544644521382:function:fundacalcio"
+			},
+			"publications": [
+				{
+					"eventName": "AMAZON.SportsEvent.Updated"
+				}
+			],
+			"subscriptions": [
+				{
+					"eventName": "SKILL_ENABLED"
+				},
+				{
+					"eventName": "SKILL_DISABLED"
+				},
+				{
+					"eventName": "SKILL_PERMISSION_ACCEPTED"
+				},
+				{
+					"eventName": "SKILL_PERMISSION_CHANGED"
+				},
+				{
+					"eventName": "SKILL_PROACTIVE_SUBSCRIPTION_CHANGED"
+				}
+			]
+		},
+		"manifestVersion": "1.0",
+		"permissions": [
+			{
+				"name": "alexa::devices:all:notifications:write"
+			}
+		],
+		"privacyAndCompliance": {
+			"allowsPurchases": false,
+			"containsAds": false,
+			"isChildDirected": false,
+			"isExportCompliant": true,
+			"locales": {
+				"it-IT": {
+					"privacyPolicyUrl": "https://docs.google.com/document/d/12h_Omd9E3plC8qo4-U0j1KNOYKDuvqj3YyMrY-BROo4/edit?usp=sharing",
+					"termsOfUseUrl": ""
+				}
+			},
+			"usesPersonalInfo": false
+		},
+		"publishingInformation": {
+			"automaticDistribution": {
+				"isActive": false
+			},
+			"category": "SPORTS_NEWS",
+			"distributionCountries": [
+				"IT"
+			],
+			"isAvailableWorldwide": false,
+			"locales": {
+				"it-IT": {
+					"description": "Sono disponibili le notifiche per aggiornarti in tempo reale sulle marcature e la fine della partite di serie A. \nPer abilitare la ricezione delle notifiche apri l'App Alexa, dal menù seleziona la voce <<Skill e giochi>>, seleziona la skill <Diretta Calcio>> e premi sul bottone <<IMPOSTAZIONI>>, poi premi sul link <<Gestisci autorizzazioni>> e spunta la voce <<Notifiche Alexa>>, infine premi il bottone <<SALVA AUTORIZZAZIONI>>.\n\nDopo questo passaggio dovrai invocare la skill Diretta Calcio per chiedere di ricevere le notifiche per la giornata corrente oppure per tutto il campionato, puoi specificare le squadre che ti interessa seguire oppure ricevere le notifiche per tutte. Per esempio puoi usare la frase: <<Alexa, chiedi a Diretta Calcio inviami le notifiche>>. Sarà attiva al massimo una notifica per partita che informerà sul risultato corrente sull'ultimo goal segnato o del finale di partita. Le notifiche scadono dopo 24 ore quindi se non chiedi di ascoltarle per tempo non saranno comunque più disponibili.\n\nSu alcuni dispositivi potrebbero non essere disponibili le luci o i suoni per segnalare la disponibilità di nuove notifiche.\n\nEcco alcuni dei comandi a cui so risponderti:\nAlexa, chiedi a Diretta Calcio i risultati della giornata\nAlexa, chiedi a Diretta Calcio cosa sta facendo la Juve\nAlexa, chiedi a Diretta Calcio chi ha segnato per il Verona\nAlexa, chiedi a Diretta Calcio quando gioca il Milan\nAlexa, chiedi a Diretta Calcio chi ha segnato oggi\nAlexa, chiedi a Diretta Calcio la classifica\nAlexa, chiedi a Diretta Calcio la classifica dei marcatori\nAlexa, chiedi a Diretta Calcio le partite della prossima giornata\nAlexa, chiedi a Diretta Calcio con chi gioca la prossima partita il Napoli\nAlexa, chiedi a Diretta Calcio quali partite si giocano nella terza giornata\nAlexa, chiedi a Diretta Calcio in che giornata siamo\nAlexa, chiedi a Diretta Calcio quando inizia la prossima giornata\nAlexa, chiedi a Diretta Calcio le ultime sul Torino\nAlexa, apri Diretta Calcio e segui le partite\nAlexa, apri Diretta Calcio e segui sempre la Lazio\nAlexa, apri Diretta Calcio e segui oggi il Napoli\nAlexa, apri Diretta Calcio e cancella le notifiche\nAlexa, chiedi a Diretta Calcio le partite in corso.\nAlexa, chiedi a Diretta Calcio la telecronaca della Roma.\nAlexa, chiedi a Diretta Calcio cosa ha fatto il Milan.\nAlexa, chiedi a Diretta Calcio associa un dispositivo.\nAlexa, chiedi a Diretta Calcio le statistiche della Roma.\nAlexa, chiedi a Diretta Calcio le squadre che hanno segnato più goal.\nAlexa chiedi a Diretta Calcio le squadre che hanno subito più goal.\n\nLe api per l'aggiornamento dei risultati in tempo reale sono state cordialemnte fornite da Tuttocampo.it",
+					"examplePhrases": [
+						"Alexa, apri diretta calcio",
+						"Alexa, chiedi a diretta calcio chi ha segnato oggi?",
+						"Alexa, chiedi a diretta calcio un aggiornamento sulle partite"
+					],
+					"keywords": [
+						"calcio",
+						"serie a",
+						"pallone",
+						"soccer",
+						"football",
+						"campionato",
+						"cannoniere",
+						"capo cannoniere",
+						"lega",
+						"serie",
+						"classifica",
+						"gioco",
+						"sport",
+						"inter",
+						"milan",
+						"juve",
+						"juventus",
+						"italiano",
+						"napoli",
+						"roma",
+						"lazio"
+					],
+					"largeIconUri": "https://i.ibb.co/FXZ50r8/logo-grande.png",
+					"name": "Diretta calcio minuto per minuto",
+					"smallIconUri": "https://i.ibb.co/4VF2PvF/logo-small.png",
+					"summary": "Puoi chiedermi i risultati delle partite, con aggiornamenti in tempo reale; la classifica, i marcatori e tanto altro sul campionato di Serie A.",
+					"updatesDescription": "Ora puoi ascoltare gli aggiornarti circa le sole partite in corso, prova a dire: Alexa, chiedi a Diretta Calcio un aggiornamento sulle partite. A partita finita ti dirò anche i bonus ed i malus, per ascoltarli prova a chiedermi: cosa ha fatto il Milan\nSe invece vorrai seguire la partita LIVE prova a dire, Alexa, chiedi a Diretta Calcio la telecronaca della Roma\nSono disponibili le notifiche per gli aggiornamenti in tempo reale sulle partite di Serie A.\nE' possibile sottoscrivere le notifiche per tutto il campionato o per la giornata corrente. Ricordati di abilitare il permesso relativo alle notifiche dalle impostazioni della skill e dimmi a quali notifiche sei interessato.\nPotrai così chiedere ad Alexa: ci sono notifiche?\nIn caso di goal segnato verrai informato circa il minuto dell'evento, della squadra che ha segnato, sul marcatore, se si è trattato di una autorete o se è stato segnato un rigore, a fine partita verrà notificato il risultato finale del match.\n\nScrivetemi pure nei commenti cosa altro vorreste fosse aggiunto. Vuoi ricevere le notifiche anche sugli altri tuoi dispositivi? Prova la nuova funzione di Account Linking (in beta aperto ai primi 30 che attiveranno la funzionalità)."
+				}
+			},
+			"testingInstructions": "niente"
+		}
+	}
+}

@@ -1,0 +1,100 @@
+{
+  "__jmd": {
+    "format": 1,
+    "locale": "it-IT"
+  },
+  "objects": {
+    "obb": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": {
+            "x": "x1",
+            "y": "y2"
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "ClassificaSerieA": {
+      "variants": {
+        "1": {
+          "alexaCard": {
+            "content": {
+              "type": "Simple",
+              "title": "Classifica Serie A",
+              "content": "Dal primo all'ultimo posto abbiamo: {teams} "
+            }
+          },
+          "reprompt": {
+            "__jmd": {},
+            "content": "Cosa altro posso fare per te?"
+          },
+          "speech": {
+            "__jmd": {},
+            "content": "{content}"
+          }
+        }
+      }
+    }
+  },
+  "strings": {
+    "classificaSerieAprimo": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": "In vetta alla classifica con {punti, plural, =1 {un punto} other {# punti}} {numTeams, plural, =1 {c'è} other {abbiamo}} {primi}"
+        },
+        "2" : {
+          "__jmd": {},
+          "content": "{numTeams, plural, =1 {Comanda} other {Comandano}} la classifica con {punti, plural, =1 {un punto} other {# punti}} {primi}"
+        }
+      }
+    },
+    "app": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": "ciao come stai"
+        }
+      }
+    },
+    "app2": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": "ciao come stai2"
+        }
+      }
+    },    
+    "s1": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": "stringa la partita tra\n"
+        }
+      }
+    },
+    "test": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": "test1"
+        },
+        "2": {
+          "__jmd": {},
+          "content": "test2"
+        }
+      }
+    },
+    "var": {
+      "variants": {
+        "1": {
+          "__jmd": {},
+          "content": "ciao {var1}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+object:obb:
+response:Prova:Teamh,teama
+string:Pippo:
+string:app:
+string:s1:
+string:test:
+string:var:var1

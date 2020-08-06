@@ -1,0 +1,11 @@
+{
+  "accountLinkingResponse": {
+    "accessTokenScheme": "HTTP_BASIC",
+    "accessTokenUrl": "https://api.pushbullet.com/oauth2/token",
+    "authorizationUrl": "https://www.pushbullet.com/authorize",
+    "clientId": "w2tqO7c4HvO59NERmYJfflnjhtjx278f",
+    "domains": [],
+    "skipOnEnablement": true,
+    "type": "AUTH_CODE"
+  }
+}
