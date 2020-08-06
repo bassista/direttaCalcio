@@ -17,7 +17,7 @@ export class ClassificaHandler {
       let numTeams : number=2
       let result : string = await jovo.jargon.rm.render({key : 'classificaSerieAprimo',
                                                          params : {
-                                                             punti : punti>1?2:1, 
+                                                             punti : punti, 
                                                              primi : 'inter e juve', 
                                                              numTeams : numTeams
                                                           }

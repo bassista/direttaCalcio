@@ -1,3 +1,13 @@
+clone project and
+
+```sh
+$ cd direttaCalcio\
+$ npm install
+$ jovo build
+$ npm run tscw
+$ jovo run --watch
+```
+
 create 
 
 ```sh
@@ -13,7 +23,5 @@ $ jovo run --watch
 ```
 
 
-
 If you now go to the [Jovo Debugger](https://www.jovo.tech/marketplace/jovo-plugin-debugger) by pressing `.` 
 or clicking on the webhook url in the terminal, you can test your voice application right away.
-
